@@ -113,6 +113,13 @@ function setCryptoCurrency(toThis) {
 		window.compressedWIFPrefix = 'Q';	
 		document.title = 'Dogecoin paper wallet generator. Wow! Many coin. Such shiny.';
 		break;
+	case 'Feathercoin':
+		window.networkVersion = 0xE;
+		window.privateKeyPrefix = 0x8E;
+		window.WIFPrefix = '6';
+		window.compressedWIFPrefix = 'T';
+		document.title = 'Feathercoin paper wallet generator';
+		break;
 	case 'Testnet':
 		window.networkVersion = 0x6F;
 		window.privateKeyPrefix = 0xEF;
@@ -143,6 +150,9 @@ switch (myDesign) {
 		break;
 	case 'alt-dogecoin':
 		setCryptoCurrency('Dogecoin');
+		break;
+	case 'alt-feathercoin':
+		setCryptoCurrency('Feathercoin');
 		break;
 	case 'alt-testnet':
 		setCryptoCurrency('Testnet');
@@ -10524,6 +10534,7 @@ Bitcoin.Util = {
                             <option value="alt-litecoin">Litecoin LTC</option>
                             <option value="alt-dogecoin">Dogecoin DOGE</option>
                             <option value="counterparty">Counterparty XCP</option>
+                            <option value="alt-feathercoin">Feathercoin</option>
                             <option value="alt-testnet">"Testnet"</option>
                           </select>
                           <select name="langPicker" id="langPicker" style="font-size: 12px; display: inline;" onChange="setDesign('default', false, this.value);">
